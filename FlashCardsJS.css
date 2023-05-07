@@ -1,0 +1,233 @@
+@media(max-width:412px)
+{
+	body 
+	{
+    text-align: center;
+	}
+	.flashCardLayout {
+	  display: grid;
+	  grid-template-areas:
+		'heading'
+		'cardControlPanel'
+		'pointsControlPanel'
+		'flip-box-container'
+		'flip-box-container';
+	  gap: 4px;
+	  padding: 5px;
+	  height: 100%;
+	  background-color:black;
+	}
+.response-box{
+	grid-area:response-box;
+	display:none;
+	background-color: #e0e0eb;
+	width:100%;
+	<!--margin: 0.75em, 0.75em, 0.75em, 0.75em;-->
+	border: 1px solid #f1f1f1;
+	height:45em;
+}
+
+.response-box textarea{
+	display:none;
+	margin:auto;
+	height:75%;
+	width:75%;
+	text-align: left;
+	word-wrap: break-word;
+	font-size:1.5em;
+	border:5px solid black
+}
+
+}
+@media(min-width:413px)
+{
+.flashCardLayout {
+	  display: grid;
+	  grid-template-areas:
+		'heading heading heading heading'
+		'cardControlPanel cardControlPanel pointsControlPanel pointsControlPanel'
+		'cardControlPanel cardControlPanel pointsControlPanel pointsControlPanel'
+		'flip-box-container flip-box-container response-box response-box'
+		'flip-box-container flip-box-container response-box response-box';
+	  gap: 4px;
+	  padding: 5px;
+	  height: 100%;
+	  background-color:black;
+	}
+
+.response-box{
+	grid-area:response-box;
+	display:flex;
+	background-color: #e0e0eb;
+	width:100%;
+	<!--margin: 0.75em, 0.75em, 0.75em, 0.75em;-->
+	border: 1px solid #f1f1f1;
+	height:45em;
+}
+
+.response-box textarea{
+	display:flex;
+	margin:auto;
+	height:75%;
+	width:75%;
+	text-align: left;
+	word-wrap: break-word;
+	font-size:1.5em;
+	border:5px solid black
+}
+}	
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading{
+	grid-area: heading;
+	background-image:linear-gradient(#004d4d, #008080);
+	color:white;
+	text-align:center;
+}
+
+.cardControlPanel{
+	grid-area:cardControlPanel;
+	display:flex;
+	background-color:grey;
+	width:100%;
+	height:100%;
+	align-items: center;
+	justify-content:center;
+}
+
+	.cardControlPanel th{
+		background-image:linear-gradient(#004d4d, #008080);
+		color:white;
+		font-weight:bold;
+		width:6em;
+		vertical-align:bottom;
+		}
+		
+	.cardControlPanel td{
+		background-color:#e6e6e6;
+		width:6em;
+		text-align:center;
+		vertical-align:top;
+		}
+		
+	.cardControlPanel table{
+		border-collapse:collapse;
+		float:left;
+	}
+		
+.pointsControlPanel{
+	grid-area:pointsControlPanel;
+	display:flex;
+	background-color:grey;
+	width:100%;
+	align-items: center;
+	justify-content:center;
+}
+
+	.pointsControlPanel th{
+		background-image:linear-gradient(#004d4d, #008080);
+		color:white;
+		font-weight:bold;
+		width:6em;
+		}
+		
+	.pointsControlPanel td{
+		background-color:#e6e6e6;
+		width:6em;
+		text-align:center;
+		}
+		
+	.pointsControlPanel table{
+		margin: 1em 0em 1em 0em;
+	}
+
+
+.flip-box-container{
+	grid-area:flip-box-container;
+	margin: 0.75em, 0.75em, 0.75em, 0.75em;
+	height:45em;
+	background-color:#e0e0eb;
+	width:100%;
+	display:flex;
+	<!--margin: 0.75em, 0.75em, 0.75em, 0.75em;-->
+	border: 1px solid #f1f1f1;
+}
+
+.flip-box {
+  grid-area:flip-box;
+  display:flex;
+  background-color: transparent;
+  perspective: 1000px;
+  height:75%;
+  width:75%;
+  margin:auto;
+  align-items: center;
+  justify-content:center;
+}
+
+.flip-box table{
+margin: 2.5% auto;
+padding:1.75em 1.75em padding:1.75em 0em;
+width:85%;
+}
+
+.flip-box th{
+text-align:center;
+color:white;
+font-weight:bold;
+font-size:2.25em;
+width:100%;
+}
+
+.flip-box td{
+text-align:left;
+color:black;
+font-size:1.5em;
+}
+
+.flip-box-front th{
+background-color:darkgreen;
+}
+
+.flip-box-back th{
+background-color:blue;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/*The position has to be 'absolute' so that the front and back are effectively stacked on top of one another*/
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border:5px solid black
+}
+
+/*--Just a background. This was grey in the original example*/
+.flip-box-front {
+  background-color: #ffffff;
+  color: black;
+}
+
+/*---Same, except for the back. This is transformed already. What does the 'transform' do? That just determines which side is flipped at the start. If this wasn't here, the 'back' would be stacked on top of the front, because their positions are absolute*/
+/*---Sets flip color---*/
+.flip-box-back {
+  background-color: #ffffff;
+  color: white;
+  transform:rotateY(180deg);
+}
+
+button{
+width:10em;
+}
