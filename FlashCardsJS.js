@@ -640,7 +640,7 @@
 			{
 			ID:1,
 			Prompt:"This git command adds file(s) contents to the index.",
-			Response:"git add";
+			Response:"git add"
 			},
 			{
 			ID:2,
