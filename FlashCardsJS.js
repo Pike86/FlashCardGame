@@ -644,25 +644,33 @@
 			},
 			{
 			ID:2,
-			Prompt:"What is the <b>Anomaly Detector</b> in Microsoft Azure?",
-			Response:"The Anomaly Detected services provides an API that developers can use to create anomaly detection solutions."
+			Prompt:"Take these step actions to push to a newly established git repository.",
+			Response:			
+			"<ol>"+
+			"<li>cd 'Folder Path'</li>"+
+			"<li>Initialize a New Local Repository - git init</li>"+
+			"<li>Confirm the staging area - git status</li>"+
+			"<li>Add files to your staging area, either individually or via 'git add .'</li>"+
+			"<li>Commit the staged files - git commit -m 'Enter your comment here'</li>"+
+			"<li>Connect to your remote repository (gitHub) - 'git remote add origin <repo url>. <b>Note:</b> 'Origin' can be any word; origin is just industry standard.</li>"+
+			"<li>Push to the Remote - git push origin master</li>"+
+			"</ol>"
 			},
 			{
 			ID:3,
-			Prompt:"What is the <b>Seeing AI</b> app?",
-			Response: "An exmample of computer vision; experimental Microsoft app."
+			Prompt:"This git command specifies that you are adding to a remote repository.",
+			Response: "git remote add origin"
 			},
 			{
 			ID:4,
-			Prompt:"Describe the four computer vision services in Microsoft Azure",
-			Response:
-			"<ul>"+
-			"<li><b>Computer Vision</b> - You can use this service to analyze images and video, and extract descriptions, tags, objects, and text.</li>"+
-			"<li><b>Custom Vision</b> - Use this service to train custom image classification and object detection models using your own images.</li>"+
-			"<li><b>Face</b> - The Face service enables you to build face detection and facial recognition solutions. </li>"+
-			"<li><b>Form Recognizer</b> - Use this service to extract information from scanned forms and invoices.</li>"+
-			"</ul>"
+			Prompt:"This git command is effectively a combination of 'git fetch' and 'git merge'",
+			Response:"git pull origin"
 			},
+			{
+			ID:5,
+			Prompt:"What is the function of a '.git' folder?",
+			Response:"The '.git' folder is a hidden directory that is created when you initialize a Git repository in a local directory. This folder contains all the information necessary for Git to track changes to the files in the repository, including the version history, branches, and commits."
+			}
 		]
 		
 	]
